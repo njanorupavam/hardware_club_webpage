@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hardware Club | IEDC Sahrdaya</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+
+<body>
+    <div id="cursor"></div>
+    <div id="cursor-blur"></div>
+
+    <nav>
+        <div class="logo">
+            <img src="logo.png" alt="Hardware Club Logo" class="logo-img">
+        </div>
+        <div class="nav-links">
+            <a href="#home">HOME</a>
+            <a href="#goals">GOALS</a>
+            <a href="#events">EVENTS</a>
+            <a href="#projects">PROJECTS</a>
+            <a href="#achievements">ACHIEVEMENTS</a>
+            <a href="#team">TEAM</a>
+            <a href="#contact">CONTACT</a>
+        </div>
+    </nav>
+
+    <section id="home">
+        <div class="circuit-bg"></div>
+        <div class="floating-elements">
+            <div class="float-item" style="--delay: 0s; --x: 10%; --y: 20%;">⚡</div>
+            <div class="float-item" style="--delay: 1s; --x: 85%; --y: 15%;">🔧</div>
+            <div class="float-item" style="--delay: 2s; --x: 15%; --y: 70%;">⚙️</div>
+            <div class="float-item" style="--delay: 0.5s; --x: 80%; --y: 75%;">🔌</div>
+            <div class="float-item" style="--delay: 1.5s; --x: 50%; --y: 10%;">💡</div>
+            <div class="float-item" style="--delay: 2.5s; --x: 25%; --y: 85%;">🖥️</div>
+            <div class="float-item" style="--delay: 3s; --x: 70%; --y: 45%;">🤖</div>
+            <div class="float-item chip" style="--delay: 0.8s; --x: 35%; --y: 25%;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="4" y="4" width="16" height="16" rx="2" />
+                    <line x1="2" y1="8" x2="4" y2="8" />
+                    <line x1="2" y1="12" x2="4" y2="12" />
+                    <line x1="2" y1="16" x2="4" y2="16" />
+                    <line x1="20" y1="8" x2="22" y2="8" />
+                    <line x1="20" y1="12" x2="22" y2="12" />
+                    <line x1="20" y1="16" x2="22" y2="16" />
+                </svg>
+            </div>
+            <div class="float-item resistor" style="--delay: 1.8s; --x: 60%; --y: 65%;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="6" y="9" width="12" height="6" rx="1" />
+                    <line x1="2" y1="12" x2="6" y2="12" />
+                    <line x1="18" y1="12" x2="22" y2="12" />
+                    <line x1="8" y1="9" x2="8" y2="15" />
+                    <line x1="10" y1="9" x2="10" y2="15" />
+                    <line x1="14" y1="9" x2="14" y2="15" />
+                    <line x1="16" y1="9" x2="16" y2="15" />
+                </svg>
+            </div>
+        </div>
+        <div class="particles" id="particles"></div>
+        <div class="hero-content">
+            <img src="logo.png" alt="Hardware Club Logo" class="hero-logo">
+            <h1 class="glitch" data-text="HARDWARE CLUB">HARDWARE CLUB</h1>
+            <p class="subtitle">INNOVATE. BUILD. DEPLOY.</p>
+            <a href="#contact" class="cta-btn">JOIN THE REVOLUTION</a>
+        </div>
+    </section>
+
+    <section id="goals">
+        <h2 class="section-title">OUR MISSION</h2>
+        <div class="goal-card">
+            <div class="icon">⚡</div>
+            <h3>Innovation</h3>
+            <p>Fostering a culture of creativity and technical excellence in hardware development.</p>
+        </div>
+        <div class="goal-card">
+            <div class="icon">🛠️</div>
+            <h3>Hands-on</h3>
+            <p>Providing real-world experience with embedded systems, IoT, and robotics.</p>
+        </div>
+        <div class="goal-card">
+            <div class="icon">🚀</div>
+            <h3>Future Ready</h3>
+            <p>Preparing students for the challenges of tomorrow's technology landscape.</p>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events">
+        <h2 class="section-title">EVENTS & WORKSHOPS</h2>
+
+        <!-- Tabs for Past and Upcoming -->
+        <div class="event-tabs">
+            <button class="tab-btn active" data-tab="past">Past Programs</button>
+            <button class="tab-btn" data-tab="upcoming">Upcoming Events</button>
+        </div>
+
+        <!-- Past Programs -->
+        <div class="tab-content active" id="past">
+            <div class="event-grid">
+                <div class="event-card">
+                    <div class="event-date">Oct 2024</div>
+                    <h3>IoT Workshop</h3>
+                    <p>Hands-on workshop on ESP32 and sensor integration. 50+ participants learned to build smart
+                        devices.</p>
+                    <div class="event-tags">
+                        <span class="tag">IoT</span>
+                        <span class="tag">ESP32</span>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-date">Sep 2024</div>
+                    <h3>PCB Design Bootcamp</h3>
+                    <p>3-day intensive bootcamp on PCB design using KiCad and Altium Designer.</p>
+                    <div class="event-tags">
+                        <span class="tag">PCB</span>
+                        <span class="tag">Design</span>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-date">Aug 2024</div>
+                    <h3>Robotics Hackathon</h3>
+                    <p>24-hour hackathon where teams built autonomous robots. 15 teams competed.</p>
+                    <div class="event-tags">
+                        <span class="tag">Robotics</span>
+                        <span class="tag">Competition</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Upcoming Events -->
+        <div class="tab-content" id="upcoming">
+            <div class="event-grid">
+                <div class="event-card upcoming">
+                    <div class="event-date">Jan 2025</div>
+                    <h3>Embedded Systems Workshop</h3>
+                    <p>Learn ARM Cortex-M programming and RTOS fundamentals. Register now!</p>
+                    <div class="event-tags">
+                        <span class="tag">Embedded</span>
+                        <span class="tag">ARM</span>
+                    </div>
+                    <button class="register-btn">Register</button>
+                </div>
+                <div class="event-card upcoming">
+                    <div class="event-date">Feb 2025</div>
+                    <h3>Hardware Hackathon 2025</h3>
+                    <p>Annual hardware hackathon with industry mentors and exciting prizes.</p>
+                    <div class="event-tags">
+                        <span class="tag">Hackathon</span>
+                        <span class="tag">Competition</span>
+                    </div>
+                    <button class="register-btn">Register</button>
+                </div>
+                <div class="event-card upcoming">
+                    <div class="event-date">Mar 2025</div>
+                    <h3>Industry Talk Series</h3>
+                    <p>Guest lectures from leading hardware engineers and innovators.</p>
+                    <div class="event-tags">
+                        <span class="tag">Talk</span>
+                        <span class="tag">Industry</span>
+                    </div>
+                    <button class="register-btn">Register</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2 class="section-title">OUR PROJECTS</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-icon">🤖</div>
+                <h3>Autonomous Rover</h3>
+                <p>Self-navigating rover with obstacle detection using ultrasonic sensors and computer vision.</p>
+                <div class="tech-stack">
+                    <span>Raspberry Pi</span>
+                    <span>OpenCV</span>
+                    <span>Python</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-icon">🏠</div>
+                <h3>Smart Home System</h3>
+                <p>IoT-based home automation with voice control and mobile app integration.</p>
+                <div class="tech-stack">
+                    <span>ESP32</span>
+                    <span>MQTT</span>
+                    <span>Flutter</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-icon">⚡</div>
+                <h3>Energy Monitor</h3>
+                <p>Real-time power consumption monitoring system with data analytics dashboard.</p>
+                <div class="tech-stack">
+                    <span>Arduino</span>
+                    <span>InfluxDB</span>
+                    <span>Grafana</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-icon">🎮</div>
+                <h3>Gesture Controller</h3>
+                <p>Hand gesture recognition system for controlling devices using accelerometer and gyroscope.</p>
+                <div class="tech-stack">
+                    <span>MPU6050</span>
+                    <span>Bluetooth</span>
+                    <span>C++</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements">
+        <h2 class="section-title">ACHIEVEMENTS</h2>
+        <div class="achievements-container">
+            <div class="achievement-card">
+                <div class="achievement-icon">🏆</div>
+                <h3>1st Place</h3>
+                <p>National Hardware Hackathon 2024</p>
+                <span class="achievement-year">2024</span>
+            </div>
+            <div class="achievement-card">
+                <div class="achievement-icon">🥈</div>
+                <h3>2nd Place</h3>
+                <p>Smart India Hackathon - Hardware Edition</p>
+                <span class="achievement-year">2024</span>
+            </div>
+            <div class="achievement-card">
+                <div class="achievement-icon">⭐</div>
+                <h3>Best Innovation</h3>
+                <p>IEEE Project Competition</p>
+                <span class="achievement-year">2023</span>
+            </div>
+            <div class="achievement-card">
+                <div class="achievement-icon">🎯</div>
+                <h3>100+ Members</h3>
+                <p>Active club membership milestone</p>
+                <span class="achievement-year">2024</span>
+            </div>
+            <div class="achievement-card">
+                <div class="achievement-icon">📚</div>
+                <h3>50+ Workshops</h3>
+                <p>Successfully conducted technical workshops</p>
+                <span class="achievement-year">2023-24</span>
+            </div>
+            <div class="achievement-card">
+                <div class="achievement-icon">🌟</div>
+                <h3>Best Club Award</h3>
+                <p>College Technical Fest 2024</p>
+                <span class="achievement-year">2024</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="team">
+        <h2 class="section-title">LEADERSHIP</h2>
+        <div class="team-grid">
+            <div class="member-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3>Yash Sanjay Kurup</h3>
+                        <p class="role">Club Lead</p>
+                    </div>
+                    <div class="card-back">
+                        <p>Leading the vision.</p>
+                        <a href="mailto:yash123737@sahrdaya.ac.in">yash123737@sahrdaya.ac.in</a>
+                    </div>
+                </div>
+            </div>
+            <div class="member-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <h3>Devika KV</h3>
+                        <p class="role">Vice Chair</p>
+                    </div>
+                    <div class="card-back">
+                        <p>Executing the strategy.</p>
+                        <a href="mailto:devika224450@sahrdaya.ac.in">devika224450@sahrdaya.ac.in</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">CONNECT</h2>
+        <div class="contact-box">
+            <p>Ready to build something amazing?</p>
+            <a href="mailto:iedchardwareclub@sahrdaya.ac.in" class="mail-link">iedchardwareclub@sahrdaya.ac.in</a>
+
+            <div class="social-links">
+                <a href="https://www.instagram.com/hardwareclub_iedc_sahrdaya?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                    target="_blank" class="social-btn instagram" title="Follow us on Instagram">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Assistant Chatbot -->
+    <div id="chatbot-container">
+        <div id="chatbot-toggle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                <circle cx="9" cy="10" r="1" />
+                <circle cx="15" cy="10" r="1" />
+                <path d="M9 14s1 1 3 1 3-1 3-1" />
+            </svg>
+            <span class="pulse-dot"></span>
+        </div>
+
+        <div id="chatbot-window">
+            <div class="chatbot-header">
+                <div class="bot-info">
+                    <div class="bot-avatar">🤖</div>
+                    <div>
+                        <h4>Hardware Assistant</h4>
+                        <span class="status">Online</span>
+                    </div>
+                </div>
+                <button id="chatbot-close">✕</button>
+            </div>
+
+            <div class="chatbot-messages" id="chatbot-messages">
+                <div class="message bot-message">
+                    <div class="message-content">
+                        👋 Hi! I'm your Hardware Club AI Assistant. How can I help you today?
+                    </div>
+                </div>
+            </div>
+
+            <div class="quick-actions">
+                <button class="quick-btn" data-question="What does the Hardware Club do?">About Us</button>
+                <button class="quick-btn" data-question="How can I join?">Join Club</button>
+                <button class="quick-btn" data-question="What events do you organize?">Events</button>
+                <button class="quick-btn" data-question="Contact information">Contact</button>
+            </div>
+
+            <div class="chatbot-input">
+                <input type="text" id="user-input" placeholder="Type your message...">
+                <button id="send-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="22" y1="2" x2="11" y2="13" />
+                        <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Hardware Club | IEDC SCET</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
