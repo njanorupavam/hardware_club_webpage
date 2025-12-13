@@ -43,27 +43,10 @@
 
         // ===== DATA =====
         const EVENTS = {
-           upcoming: [
-    {
-        date: "Coming Soon",
-        title: "SMART INDIA HACKATHON",
-        desc: (
-            <>
-                Stay tuned for our next flagship event!{" "}
-                <a
-                    href="https://greatindianhackathon.in"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{ color: "#06b6d4", textDecoration: "underline" }}
-                >
-                    greatindianhackathon.in
-                </a>
-            </>
-        ),
-        tags: ["Innovation", "Tech"],
-        icon: "fa-calendar-check"
-    },
-],
+            upcoming: [
+                { date: "Dec 18, 2025", title: "Workshop on Android Development", desc: "Join us for an exciting online workshop featuring industry experts Vishal Das from Google for Developers India Edu Program and Belal Khan, Google Developer Expert. Learn Android development from the best!", tags: ["Android", "Mobile Dev", "Workshop"], icon: "fa-mobile-screen", image: "android-workshop.png" },
+                { date: "Coming Soon", title: "SMART INDIA HACKATHON", desc: "Stay tuned for our next flagship event! Visit greatindianhackathon.in for more information.", tags: ["Innovation", "Tech", "Hackathon"], icon: "fa-trophy", image: "smart-india-hackathon.png" },
+            ],
             past: [
                 { date: "Aug 2025", title: "AI in Robotics", desc: "Hands-on workshop integrating AI with hardware. Built bots from scratch at Accenture Lab.", tags: ["Robotics", "AI", "Hardware"], icon: "fa-robot" },
                 { date: "Jul 2025", title: "Soft Robotics", desc: "Explored soft actuators and prototypes with Mr. Jeslin Joshy. Collaboration with Future Tech Club.", tags: ["Soft Robotics", "Innovation"], icon: "fa-hand-sparkles" },
@@ -504,9 +487,13 @@
                                             maxWidth: '450px'
                                         }}
                                     >
-                                        <div style={{ fontSize: '3rem', color: 'var(--accent-cyan)', marginBottom: '15px' }} className="icon-glow">
-                                            <i className={`fa-solid ${event.icon}`}></i>
-                                        </div>
+                                        {event.image ? (
+                                            <img src={event.image} alt={event.title} style={{ width: '100%', borderRadius: '10px', marginBottom: '20px', boxShadow: '0 10px 30px rgba(6,182,212,0.3)' }} />
+                                        ) : (
+                                            <div style={{ fontSize: '3rem', color: 'var(--accent-cyan)', marginBottom: '15px' }} className="icon-glow">
+                                                <i className={`fa-solid ${event.icon}`}></i>
+                                            </div>
+                                        )}
                                         <div style={{ color: 'var(--accent-purple)', marginBottom: '12px', fontSize: '0.95rem', fontWeight: 600 }}>{event.date}</div>
                                         <h3 style={{ fontSize: '1.6rem', marginBottom: '12px', color: 'white' }}>{event.title}</h3>
                                         <p style={{ color: 'var(--text-secondary)', marginBottom: '25px', lineHeight: 1.6 }}>{event.desc}</p>
