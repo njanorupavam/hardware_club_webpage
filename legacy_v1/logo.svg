@@ -1,0 +1,152 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer Circle Border -->
+  <circle cx="100" cy="100" r="95" fill="none" stroke="url(#gradient1)" stroke-width="4"/>
+  
+  <!-- Inner Glow Circle -->
+  <circle cx="100" cy="100" r="85" fill="rgba(0, 243, 255, 0.05)" stroke="rgba(0, 243, 255, 0.2)" stroke-width="2"/>
+  
+  <!-- Circuit Traces -->
+  <g stroke="#00f3ff" stroke-width="2.5" fill="none" opacity="0.7">
+    <!-- Top traces -->
+    <path d="M 100 20 L 100 55"/>
+    <circle cx="100" cy="55" r="3" fill="#00f3ff"/>
+    
+    <!-- Right traces -->
+    <path d="M 180 100 L 145 100"/>
+    <circle cx="145" cy="100" r="3" fill="#00f3ff"/>
+    
+    <!-- Bottom traces -->
+    <path d="M 100 180 L 100 145"/>
+    <circle cx="100" cy="145" r="3" fill="#00f3ff"/>
+    
+    <!-- Left traces -->
+    <path d="M 20 100 L 55 100"/>
+    <circle cx="55" cy="100" r="3" fill="#00f3ff"/>
+  </g>
+  
+  <!-- Green circuit traces diagonal -->
+  <g stroke="#00ff88" stroke-width="2" fill="none" opacity="0.5">
+    <path d="M 40 40 L 70 70"/>
+    <path d="M 160 40 L 130 70"/>
+    <path d="M 160 160 L 130 130"/>
+    <path d="M 40 160 L 70 130"/>
+  </g>
+  
+  <!-- Central Microchip (Larger) -->
+  <g id="chip">
+    <!-- Chip body -->
+    <rect x="75" y="75" width="50" height="50" rx="4" fill="url(#chipGradient)" stroke="#00f3ff" stroke-width="3"/>
+    
+    <!-- Chip pins - left -->
+    <line x1="68" y1="82" x2="75" y2="82" stroke="#00f3ff" stroke-width="2"/>
+    <line x1="68" y1="92" x2="75" y2="92" stroke="#00f3ff" stroke-width="2"/>
+    <line x1="68" y1="102" x2="75" y2="102" stroke="#00f3ff" stroke-width="2"/>
+    <line x1="68" y1="112" x2="75" y2="112" stroke="#00f3ff" stroke-width="2"/>
+    
+    <!-- Chip pins - right -->
+    <line x1="125" y1="82" x2="132" y2="82" stroke="#00f3ff" stroke-width="2"/>
+    <line x1="125" y1="92" x2="132" y2="92" stroke="#00f3ff" stroke-width="2"/>
+    <line x1="125" y1="102" x2="132" y2="102" stroke="#00f3ff" stroke-width="2"/>
+    <line x1="125" y1="112" x2="132" y2="112" stroke="#00f3ff" stroke-width="2"/>
+    
+    <!-- Chip pins - top -->
+    <line x1="82" y1="68" x2="82" y2="75" stroke="#00f3ff" stroke-width="2"/>
+    <line x1="92" y1="68" x2="92" y2="75" stroke="#00f3ff" stroke-width="2"/>
+    <line x1="108" y1="68" x2="108" y2="75" stroke="#00f3ff" stroke-width="2"/>
+    <line x1="118" y1="68" x2="118" y2="75" stroke="#00f3ff" stroke-width="2"/>
+    
+    <!-- Chip pins - bottom -->
+    <line x1="82" y1="125" x2="82" y2="132" stroke="#00f3ff" stroke-width="2"/>
+    <line x1="92" y1="125" x2="92" y2="132" stroke="#00f3ff" stroke-width="2"/>
+    <line x1="108" y1="125" x2="108" y2="132" stroke="#00f3ff" stroke-width="2"/>
+    <line x1="118" y1="125" x2="118" y2="132" stroke="#00f3ff" stroke-width="2"/>
+    
+    <!-- Glowing core -->
+    <circle cx="100" cy="100" r="12" fill="url(#coreGradient)">
+      <animate attributeName="r" values="12;14;12" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Hardware Tools (BIGGER and CLEARER) -->
+  
+  <!-- Wrench (top-left) - LARGER -->
+  <g transform="translate(35, 30)">
+    <path d="M 8 8 L 14 14 L 18 10 L 12 4 Z" fill="#b0b0b0" stroke="#00f3ff" stroke-width="1.5"/>
+    <rect x="10" y="14" width="6" height="20" rx="1" fill="#c0c0c0" stroke="#00f3ff" stroke-width="1.5"/>
+    <circle cx="13" cy="28" r="4" fill="none" stroke="#00f3ff" stroke-width="1.5"/>
+  </g>
+  
+  <!-- Screwdriver (top-right) - LARGER -->
+  <g transform="translate(150, 30)">
+    <rect x="8" y="2" width="6" height="18" rx="1" fill="#ff9900" stroke="#00f3ff" stroke-width="1.5"/>
+    <polygon points="11,20 7,30 15,30" fill="#c0c0c0" stroke="#00f3ff" stroke-width="1.5"/>
+    <line x1="11" y1="2" x2="11" y2="6" stroke="#ffcc00" stroke-width="2"/>
+  </g>
+  
+  <!-- Resistor (bottom-left) - LARGER -->
+  <g transform="translate(30, 155)">
+    <rect x="5" y="8" width="20" height="10" rx="2" fill="#d4a574" stroke="#00f3ff" stroke-width="1.5"/>
+    <!-- Resistor bands -->
+    <line x1="9" y1="8" x2="9" y2="18" stroke="#ff0000" stroke-width="2"/>
+    <line x1="13" y1="8" x2="13" y2="18" stroke="#ffcc00" stroke-width="2"/>
+    <line x1="17" y1="8" x2="17" y2="18" stroke="#00ff00" stroke-width="2"/>
+    <line x1="21" y1="8" x2="21" y2="18" stroke="#0088ff" stroke-width="2"/>
+    <!-- Leads -->
+    <line x1="0" y1="13" x2="5" y2="13" stroke="#c0c0c0" stroke-width="2"/>
+    <line x1="25" y1="13" x2="30" y2="13" stroke="#c0c0c0" stroke-width="2"/>
+  </g>
+  
+  <!-- LED (bottom-right) - LARGER -->
+  <g transform="translate(155, 155)">
+    <circle cx="10" cy="10" r="8" fill="url(#ledGradient)" stroke="#00f3ff" stroke-width="1.5"/>
+    <line x1="10" y1="18" x2="10" y2="25" stroke="#c0c0c0" stroke-width="2"/>
+    <line x1="10" y1="2" x2="10" y2="-5" stroke="#c0c0c0" stroke-width="2"/>
+    <!-- Light rays -->
+    <line x1="10" y1="10" x2="5" y2="5" stroke="#ffcc00" stroke-width="1.5" opacity="0.7"/>
+    <line x1="10" y1="10" x2="15" y2="5" stroke="#ffcc00" stroke-width="1.5" opacity="0.7"/>
+    <line x1="10" y1="10" x2="2" y2="10" stroke="#ffcc00" stroke-width="1.5" opacity="0.7"/>
+  </g>
+  
+  <!-- Capacitor (left side) - LARGER -->
+  <g transform="translate(25, 95)">
+    <line x1="5" y1="0" x2="5" y2="12" stroke="#00f3ff" stroke-width="3"/>
+    <line x1="10" y1="0" x2="10" y2="12" stroke="#00f3ff" stroke-width="3"/>
+    <line x1="0" y1="6" x2="5" y2="6" stroke="#c0c0c0" stroke-width="2"/>
+    <line x1="10" y1="6" x2="15" y2="6" stroke="#c0c0c0" stroke-width="2"/>
+  </g>
+  
+  <!-- Transistor (right side) - LARGER -->
+  <g transform="translate(160, 95)">
+    <circle cx="8" cy="6" r="7" fill="none" stroke="#00f3ff" stroke-width="2"/>
+    <line x1="5" y1="3" x2="5" y2="9" stroke="#00f3ff" stroke-width="2"/>
+    <line x1="5" y1="4" x2="12" y2="0" stroke="#c0c0c0" stroke-width="2"/>
+    <line x1="5" y1="8" x2="12" y2="12" stroke="#c0c0c0" stroke-width="2"/>
+    <polygon points="10,11 12,12 11,9" fill="#c0c0c0"/>
+  </g>
+  
+  <!-- Gradients -->
+  <defs>
+    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00f3ff;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#ff003c;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#00f3ff;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="chipGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a1a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#333333;stop-opacity:1" />
+    </linearGradient>
+    
+    <radialGradient id="coreGradient">
+      <stop offset="0%" style="stop-color:#ffaa00;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#ff6600;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#ff3300;stop-opacity:0.6" />
+    </radialGradient>
+    
+    <radialGradient id="ledGradient">
+      <stop offset="0%" style="stop-color:#ffff00;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#ff9900;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#ff6600;stop-opacity:0.6" />
+    </radialGradient>
+  </defs>
+</svg>
