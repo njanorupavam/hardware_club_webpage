@@ -44,7 +44,20 @@
         // ===== DATA =====
         const EVENTS = {
             upcoming: [
-                { date: "Coming Soon", title: "SMART INDIA HACKATHON", desc: "Stay tuned for our next flagship event! greatindianhackathon.in",tags: [" Innovation", "Tech"], icon: "fa-calendar-check" },
+                desc: (
+    <>
+        Stay tuned for our next flagship event!{" "}
+        <a
+            href="https://greatindianhackathon.in"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "#06b6d4", textDecoration: "underline" }}
+        >
+            greatindianhackathon.in
+        </a>
+    </>
+),
+tags: [" Innovation", "Tech"], icon: "fa-calendar-check" },
             ],
             past: [
                 { date: "Aug 2025", title: "AI in Robotics", desc: "Hands-on workshop integrating AI with hardware. Built bots from scratch at Accenture Lab.", tags: ["Robotics", "AI", "Hardware"], icon: "fa-robot" },
