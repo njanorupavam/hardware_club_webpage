@@ -502,3 +502,60 @@ nav.scrolled {
     background: rgba(10, 1, 24, 0.8);
     box-shadow: 0 4px 30px rgba(0, 243, 255, 0.1);
 }
+
+/* ===== RESPONSIVE UTILITIES (Replace/Fallback for Tailwind) ===== */
+.hidden {
+    display: none !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Navbar Desktop/Mobile Logic */
+.nav-desktop-menu {
+    display: none;
+    gap: 2.5rem;
+}
+
+.nav-mobile-toggle {
+    display: block;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.nav-mobile-overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.98);
+    backdrop-filter: blur(15px);
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Desktop Breakpoint */
+@media (min-width: 768px) {
+    .nav-desktop-menu {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-mobile-toggle {
+        display: none;
+    }
+
+    .nav-mobile-overlay {
+        display: none !important;
+        /* Force hide overlay on desktop */
+    }
+}
