@@ -91,6 +91,7 @@ h4,
     filter: blur(80px);
     opacity: 0.3;
     z-index: -1;
+    will-change: transform;
     animation: float 20s ease-in-out infinite;
 }
 
